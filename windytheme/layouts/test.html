@@ -1,0 +1,131 @@
+{{ define "main" }}
+<div class="mt-28">
+  <div class="mt-28 mx-[170px] lg:mx-[300px] mb-24">
+    <img src="{{ "/img/Scope_circles_with_text_2022-05-04.png" | relURL }}"
+         alt=""
+         class="w-1/5 float-left pr-8">
+  
+    <h1 class="text-3xl font-bold mt-10">Making Microbiology Data FAIR and Open</h1>
+  
+    <p class="text-xl mt-4">
+      As a part of the Nationale Forschungsdaten Infrastruktur (NFDI), NFDI4Microbiota
+      wants to support the <b>microbiology community</b> with access to data, analysis services,
+      data/metadata standards, and training.
+    </p>
+  
+    <div class="text-xl float-right mt-4">
+      <a href="{{ "/aboutus/about" | relURL }}"
+         class="bg-[#ffb12d] text-black py-2 px-4 rounded-full text-lg">
+         Learn more
+      </a>
+    </div>
+  </div>
+  
+  <br>
+  <hr class="my-8">
+  <br>
+  
+  <div class="container mx-auto mt-12">
+    <div class="home-body">
+      <h1 class="text-3xl font-bold mb-6">What we offer</h1>
+      <p class="text-xl mb-6">
+        Our consortium offers a wide range of services, knowledge, and best practices.
+        Below you find the main topics on which we support our community.
+      </p>
+    </div>
+  
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="p-5">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <a href="{{ "services/trainings.html" | relURL }}">
+            <img src="{{ "/img/frontpage/TRAINING_(c)jason-goodman-unsplash.jpg" | relURL }}"
+                 class="object-cover w-full h-48 rounded-lg" alt="Training">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <h1 class="text-white text-2xl font-bold">Training</h1>
+            </div>
+          </a>
+        </div>
+        <h6 class="text-center mt-4">
+          An important goal is the support of the microbiology community by education and training
+        </h6>
+      </div>
+  
+      <div class="p-5">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <a href="{{ "services.html" | relURL }}">
+            <img src="{{ "/img/frontpage/SERVICES_(c)john-schnobrich-unsplash.jpg" | relURL }}"
+                 class="object-cover w-full h-48 rounded-lg" alt="Services">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <h1 class="text-white text-2xl font-bold">Services</h1>
+            </div>
+          </a>
+        </div>
+        <h6 class="text-center mt-4">
+          To support your research we offer services such as StrainInfo and VirJenDB
+        </h6>
+      </div>
+  
+      <div class="p-5">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <a href="{{ "/contact-form/" | relURL }}">
+            <img src="{{ "/img/frontpage/HELPDESK_(c)christopher-gower-unsplash.jpg" | relURL }}"
+                 class="object-cover w-full h-48 rounded-lg" alt="Helpdesk">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <h1 class="text-white text-2xl font-bold">Helpdesk</h1>
+            </div>
+          </a>
+        </div>
+        <h6 class="text-center mt-4">
+          Questions about data management, data analysis and NFDI4Microbiota will be answered here
+        </h6>
+      </div>
+  
+      <div class="p-5">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <a href="{{ "community/usecase.html" | relURL }}">
+            <img src="{{ "/img/frontpage/USE-CASES_(c)markus-spiske-unsplash.jpg" | relURL }}"
+                 class="object-cover w-full h-48 rounded-lg" alt="Use Cases">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <h1 class="text-white text-2xl font-bold text-center">Use Cases</h1>
+            </div>
+          </a>
+        </div>
+        <h6 class="text-center mt-4">
+          Explore scientific projects in the broad field of microbiology research within the consortium
+        </h6>
+      </div>
+  
+      <div class="p-5">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <a href="{{ "community/ambassador.html" | relURL }}">
+            <img src="{{ "/img/frontpage/COMMUNITY-ENGAGEMENT_(c)marvin-meyer-unsplash.jpg" | relURL }}"
+                 class="object-cover w-full h-48 rounded-lg" alt="Community Engagement">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <h1 class="text-white text-2xl font-bold text-center">Community Engagement</h1>
+            </div>
+          </a>
+        </div>
+        <h6 class="text-center mt-4">
+          Engage in our creative community via Coffee Talks and our Ambassador Program
+        </h6>
+      </div>
+  
+      <div class="p-5">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <a href="{{ "newsroom/flexfunds.html" | relURL }}">
+            <img src="{{ "/img/frontpage/FUNDING-SUPPORT_(c)arlington-research-unsplash.jpg" | relURL }}"
+                 class="object-cover w-full h-48 rounded-lg" alt="Funding">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+              <h1 class="text-white text-2xl font-bold text-center">Funding</h1>
+            </div>
+          </a>
+        </div>
+        <h6 class="text-center mt-4">
+          NFDI4Microbiota offers yearly FlexFunds Calls - get in touch if you are interested!
+        </h6>
+      </div>
+    </div>
+  </div>
+  {{ .Content }}
+</div>
+{{ end }}

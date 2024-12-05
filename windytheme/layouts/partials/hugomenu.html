@@ -1,0 +1,61 @@
+<nav class="hidden lg:flex lg:items-end w-full lg:w-auto lg:ml-auto h-20">
+    <ul class="menu flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6 px-4" >
+      {{ range site.Menus.main }}
+        {{ if .HasChildren }}
+          <!-- Dropdown for items with children -->
+          <li class="menu-item">
+            {{ partial "dropdown.html" (dict "dropdownID" (print "dropdown-" .Name) "title" .Name "menuItems" .Children) }}
+          </li>
+        {{ else }}
+          <!-- Regular menu item -->
+          <li class="menu-item">
+            <a href="{{ .URL }}" class="inline-flex w-full justify-center gap-x-1.5 rounded-md py-2 text-gray-900 hover:bg-gray-50">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </nav>
+
+  
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dropdownButtons = document.querySelectorAll('[id^="dropdown-"]'); // Select buttons with dropdown IDs
+        
+        dropdownButtons.forEach(button => {
+          const dropdownMenu = button.closest('li').querySelector('.absolute'); // Find the corresponding menu
+          
+          button.addEventListener("click", (event) => {
+            event.stopPropagation(); // Prevent click from bubbling up to document
+            const isHidden = dropdownMenu.classList.contains("hidden");
+      
+            // Close all dropdowns first (optional)
+            closeAllDropdowns();
+      
+            if (isHidden) {
+              dropdownMenu.classList.remove("hidden", "scale-95", "opacity-0");
+              dropdownMenu.classList.add("scale-100", "opacity-100");
+            } else {
+              dropdownMenu.classList.add("hidden", "scale-95", "opacity-0");
+              dropdownMenu.classList.remove("scale-100", "opacity-100");
+            }
+          });
+        });
+      
+        // Close dropdowns when clicking outside
+        document.addEventListener("click", (event) => {
+          // Check if click is outside the dropdown button or menu
+          if (!event.target.closest('.relative')) {
+            closeAllDropdowns();
+          }
+        });
+      
+        function closeAllDropdowns() {
+          document.querySelectorAll('.absolute').forEach(menu => {
+            menu.classList.add("hidden", "scale-95", "opacity-0");
+            menu.classList.remove("scale-100", "opacity-100");
+          });
+        }
+      });
+      
+  </script>
+  

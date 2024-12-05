@@ -1,0 +1,148 @@
+/* Importing Tailwind modules */
+
+@import "node_modules/tailwindcss/base";
+@import "node_modules/tailwindcss/components";
+@import "node_modules/tailwindcss/utilities";
+
+/* Importing the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Defaults */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px; /* Default base font size */
+  font-weight: 400; /* Normal weight */
+  line-height: 1.5; /* Default line height for readability */
+  color: #212121; /* Default text color (dark gray) */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header {
+  border-bottom: 1px solid #222;
+  margin-bottom: 1rem;
+}
+
+footer {
+  border-top: 1px solid #222;
+  margin-top: 1rem;
+}
+
+a {
+  color: #ffc000;
+  text-decoration: none;
+}
+
+/* Headings */
+h1 {
+  font-size: 6rem; /* 96px */
+  font-weight: 300;
+  line-height: 1.167; /* 112px */
+  letter-spacing: -0.01562em;
+  color: #212121;
+}
+
+h2 {
+  font-size: 3.75rem; /* 60px */
+  font-weight: 300;
+  line-height: 1.2; /* 72px */
+  letter-spacing: -0.00833em;
+  color: #212121;
+}
+
+h3 {
+  font-size: 3rem; /* 48px */
+  font-weight: 400;
+  line-height: 1.167; /* 56px */
+  letter-spacing: 0em;
+  color: #212121;
+}
+
+h4 {
+  font-size: 2.125rem; /* 34px */
+  font-weight: 400;
+  line-height: 1.235; /* 40px */
+  letter-spacing: 0.00735em;
+  color: #212121;
+}
+
+h5 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 400;
+  line-height: 1.334; /* 32px */
+  letter-spacing: 0em;
+  color: #212121;
+}
+
+h6 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 500;
+  line-height: 1.6; /* 32px */
+  letter-spacing: 0.0075em;
+  color: #212121;
+}
+
+/* Body Text */
+p {
+  font-size: 1rem; /* 16px */
+  font-weight: 400;
+  line-height: 1.5; /* 24px */
+  letter-spacing: 0.03125em;
+  color: #424242; /* Slightly lighter gray */
+}
+
+.body2 {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 400;
+  line-height: 1.43; /* 20px */
+  letter-spacing: 0.01786em;
+  color: #424242;
+}
+
+hr {
+  height: 2px; /* Thickness */
+  background-color: #ccc; /* Line color */
+  border: none; /* Remove default styling */
+  margin: 20px auto; /* Center and add spacing */
+}
+
+
+/* Caption */
+.caption {
+  font-size: 0.75rem; /* 12px */
+  font-weight: 400;
+  line-height: 1.66; /* 20px */
+  letter-spacing: 0.03333em;
+  color: #757575; /* Lighter gray */
+}
+
+/* Button */
+.button {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  line-height: 1.75; /* 24px */
+  letter-spacing: 0.08929em;
+  text-transform: uppercase; /* Material buttons are typically uppercase */
+  color: #000000;
+  background-color: #ffb12d; /* Material Design Primary Color */
+  padding: 8px 16px;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #3700B3; /* Hover color */
+}
+
+/* Overline */
+.overline {
+  font-size: 0.75rem; /* 12px */
+  font-weight: 400;
+  line-height: 2.66; /* 32px */
+  letter-spacing: 0.16667em;
+  text-transform: uppercase;
+  color: #757575;
+}

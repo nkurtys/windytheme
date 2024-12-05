@@ -1,0 +1,17 @@
+<div class="fixed z-10 w-full top-0 left-0 bg-white shadow-lg">
+    <nav class="flex pl-4 py-2" aria-label="Main navigation">
+        <div class="flex items-center">
+            <button class="p-2 text-gray-500 hover:text-gray-800 focus:outline-none 2xl:hidden" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-label="Toggle docs navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+              </svg>
+            </button>
+            <a href="{{ "/" | relURL }}" class="flex items-center">
+                <img src="{{ "/img/nfdi4microbiota_Logo_new.png" | relURL }}" alt="Logo" class="h-20 w-36">
+            </a>
+        </div>
+        {{ partial "hugomenu.html" }}
+    </nav>
+</div>
+
+  
